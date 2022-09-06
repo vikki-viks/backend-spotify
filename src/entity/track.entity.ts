@@ -4,6 +4,9 @@ import { Comment } from './comment.entity';
 @Entity()
 export class Track {
   @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
   name: string;
 
   @Column()
@@ -12,10 +15,10 @@ export class Track {
   @Column()
   text: string;
 
-  @Column()
+  @Column('int4')
   listens: number;
 
-  @Column()
+  @Column('text')
   picture: string;
 
   @Column()
